@@ -1,6 +1,11 @@
 class PrintDate {
-  printCurrentDate() {
-    return console.log(new Date());
+    formCurrentDate() {
+        return console.log(new Date());
+    }
+    printCurrentDate() {
+        fecha = new Date();
+        console.log(fecha) ;
+        return fecha;
   }
 }
 

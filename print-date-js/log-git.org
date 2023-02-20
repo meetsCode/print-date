@@ -1,0 +1,25 @@
+Con eso ya puedo activar de nuevo el botón Save.
+
+   
+* EL PRIMER ARRANQUE
+instalar con: git ...
+  ejecutar:
+      npm install
+      npm run release
+
+      
+* El planteamiento:
+Imagino que tengo libertad para modificar aquello que considere necesario para
+poderle hacer un test a ese método.
+
+Mi punto de vista:
+1. Lo que veo es un método que es dos veces impuro. por el console.log y por el Date
+2. No se puede enviar como return una función que no devuelve nada.
+3. qué formato tiene la fecha? Mejor lo decido yo lo paso a string con variable descriptiva.
+4. La misión es examinar la salida estandart
+
+Que Date no es puro es porque cada vez que lo llamo me devuelve un valor distinto.
+Que console.log no es puro es porque el resultado se sale del scope del método.
+      
+Me parece lo más fácil controlar el console.log. Basta con separar el generador del texto y
+el console.log que es el que produce el side-effect.
