@@ -2,11 +2,12 @@ Separo el código interno de la función buscando funciones internas puras.
 
 * En este commit
 Intento llevarme el primer side-effect fuera de alguna manera.
-Lo que quiero es que imprima la fecha actual!
-La idea inicial es obtener el texto por separado. Eso lo puedo examinar.
+Lo importante es que el método conserve la función: que imprima la fecha actual!
+La idea inicial si obtengo el texto por separado. Lo puedo examinar.
 
-Con esto lo que aunque sea casi imposible testear el método en sí,
-sí que pueda testear cada una de las líneas internas del método.
+Ahora mismo no puedo examinar el método porque no sé como controlar el stdio. 
+Lo que intentaré es separar su código interno para poder examinar cada una de las líneas. Una linea, una función. Una función un test.
+En resumen testear cada una de las líneas internas del método.
 
 Añado una línea donde doy forma a la fecha.
 Puesto que el método formador ya está testeado no tengo que hacerlo
