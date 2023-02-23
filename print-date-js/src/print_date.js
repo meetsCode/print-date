@@ -4,7 +4,8 @@ class PrintDate {
     }
     printCurrentDate() {
         fecha = new Date();
-        console.log(fecha) ;
+        formFecha = fecha.toISOString();
+        console.log(formFecha);
         return fecha;
   }
 }

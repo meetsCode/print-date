@@ -1,11 +1,26 @@
-Con eso ya puedo activar de nuevo el botón Save.
+Separo el código interno de la función buscando funciones internas puras.
 
-   
+* En este commit
+Intento llevarme el primer side-effect fuera de alguna manera.
+Lo que quiero es que imprima la fecha actual!
+La idea inicial es obtener el texto por separado. Eso lo puedo examinar.
+
+Con esto lo que aunque sea casi imposible testear el método en sí,
+sí que pueda testear cada una de las líneas internas del método.
+
+Añado una línea donde doy forma a la fecha.
+Puesto que el método formador ya está testeado no tengo que hacerlo
+a menos que yo desee algún formato especial.
+
+Como me hacía daño a los ojos un método que devolviera nil lo he
+cambiado. Tenía dos opciones devolver la propia instancia o devolver la fecha.
+Elegí la fecha al final pero por azar.
+
+
 * EL PRIMER ARRANQUE
 instalar con: git ...
   ejecutar:
       npm install
-      npm run release
 
       
 * El planteamiento:
@@ -21,5 +36,6 @@ Mi punto de vista:
 Que Date no es puro es porque cada vez que lo llamo me devuelve un valor distinto.
 Que console.log no es puro es porque el resultado se sale del scope del método.
       
-Me parece lo más fácil controlar el console.log. Basta con separar el generador del texto y
-el console.log que es el que produce el side-effect.
+?Hay algún test que me permita controlar stdio? Si no lo hay tendré que separar el
+generador de texto y el console.log que es realmente el que produce el side-effect.
+
